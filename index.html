@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <title>Всепони. Первый канал</title>
+  <meta name="description" content="Стрим лампового чата для броней и не только в телеграме. 200+ броней; Два года истории; 3000+ сообщений в день; Активность 24/7">
+  <meta name="keywords" content="MLP, My Little Pony, Brony, Брони, Чат, Телеграм, Telegram">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fb2fbc">
+  <meta name="yandex-verification" content="8734b93412b64058"/>
+  <meta name="google-site-verification" content="xp28uXlQ1cPVegFdnkv_8SR-1uZk7pJI3yzjB6Jf8eI" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stream.css">
+  <base href="/" />
+</head>
+<body>
+
+  <section class="main">
+    <div class="main__content">
+      <header class="main__header header padding">
+        <h1 class="header__logo">
+          <span class="logo">
+            <span class="logo__gradient">
+              Всепони.
+            </span>
+            <small
+              class="logo__small logo__glitch"
+              data-text="Первый канал"
+            >
+              <span class="logo__glitch-inner">
+                Первый канал
+              </span>
+            </small>
+          </span>
+        </h1>
+      </header>
+      <div class="main__video padding">
+        <div class="video__wrapper">
+          <video
+            class="video"
+            id="video"
+            width="1920"
+            height="1080"
+            controls
+            autoplay
+            poster="/images/poster.png"
+            data-source="/live/vspn.m3u8"
+          >
+          </video>
+          <div class="main__counter">
+            <span class="main__counter-text">
+              Зрителей:
+            </span>
+            <span data-count="localhost:3000">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="main__chat chat">
+      <div id="chatbro"></div>
+    </aside>
+  </section>
+
+  <script src="/hls.js"></script>
+  <script src="/socket.io.slim.js"></script>
+  <script src="/init.js" defer></script>
+  <script src="/counter.js" defer></script>
+
+</body>
+</html>
