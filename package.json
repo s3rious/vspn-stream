@@ -20,9 +20,7 @@
   "homepage": "https://github.com/s3rious/vspn-stream#readme",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "@types/debounce": "^1.2.0",
     "@types/hls.js": "^0.12.0",
-    "debounce": "^1.2.0",
     "hls.js": "^0.12.2"
   },
   "devDependencies": {
