@@ -148,7 +148,7 @@ body {
 .main__counter {
   position: absolute;
   top: -1.75em;
-  right: 0;
+  left: 0;
   font-size: 0.825em;
   opacity: 0.375;
   transition: opacity 0.3333s var(--cubic-in-out);
