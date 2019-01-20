@@ -9,6 +9,8 @@
   --color-lightest:     #E3ECF1;
 
   --background-image: url(/images/backgrounds/1.jpg);
+
+  --cubic-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 @import "./animations.css";
@@ -105,10 +107,10 @@ body {
 
 .logo:hover .logo__glitch::before,
 .logo:hover .logo__glitch::after {
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-timing-function: var(--cubic-in-out);
   animation-iteration-count: infinite;
   opacity: 1;
-  transition: opacity 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: opacity 0.75s var(--cubic-in-out);
 }
 
 .logo:hover .logo__glitch::before {
@@ -149,7 +151,7 @@ body {
   right: 0;
   font-size: 0.825em;
   opacity: 0.375;
-  transition: opacity 0.3333s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: opacity 0.3333s var(--cubic-in-out);
 }
 
 .video__wrapper:hover .main__counter {
@@ -188,7 +190,7 @@ body {
   background-size: cover;
   pointer-events: none;
   animation-name: glitch-anim-bg;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-timing-function: var(--cubic-in-out);
   animation-iteration-count: infinite;
   opacity: 0.634;
 }
