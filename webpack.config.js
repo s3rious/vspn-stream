@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
-const config = {
+const config = (env, options) => ({
   entry: path.resolve(__dirname, 'src/app'),
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -70,16 +70,19 @@ const config = {
               ident: 'postcss',
               sourceMap: true,
               plugins: () => [
-                require('cssnano')({
-                  preset: [
-                    'default',
-                    {
-                      discardComments: {
-                        removeAll: true,
+                options.mode === 'production'
+                  ? require('cssnano')({
+                    preset: [
+                      'default',
+                      {
+                        discardComments: {
+                          removeAll: true,
+                        },
                       },
-                    },
-                  ],
-                }),
+                    ],
+                  })
+                  : () => {}
+                ,
                 require('postcss-preset-env')(),
               ],
             },
@@ -106,6 +109,6 @@ const config = {
     }),
     new CleanWebpackPlugin('dist'),
   ],
-}
+})
 
 module.exports = config
