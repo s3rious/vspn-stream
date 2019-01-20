@@ -2,6 +2,7 @@ import '@babel/polyfill'
 import './css/index.css'
 
 import Video from './components/video'
+import Chat from './components/chat'
 
-const videoNode = document.getElementById('video')
-const video = new Video(videoNode, document.body)
+const video = new Video(document.getElementById('video'), document.body)
+const chat = new Chat('32xHE', window)
